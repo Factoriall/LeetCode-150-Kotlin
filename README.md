@@ -1,8 +1,8 @@
 # LeetCode-150-Kotlin
 
 ## 📊 Status
-- **Status:** 0 / 150 (0%)
-- **진행률:** [▓░░░░░░░░░░] 1 / 150 (0%)
+- **Status: 2 / 150 (1%)
+- **진행률: [▓▓░░░░░░░░░░] 2 / 150 (1%)
 
 ---
 
@@ -11,3 +11,4 @@
 | No. | Problem Title | Link |
 |:---:|:---|:---:|
 | 0088 | Merge Sorted Array | [Link](https://leetcode.com/problems/merge-sorted-array/) |
+| 0027 | Remove Element | [Link](https://leetcode.com/problems/remove-element/) |
