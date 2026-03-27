@@ -2,19 +2,37 @@ package leetcode.Top150.Q0013_Roman_to_Integer
 
 class Solution {
     fun romanToInt(s: String): Int {
-        val romanMap = mapOf<Char, Int>(
-            'I' to 1,
-            'V' to 5,
-            'X' to 10,
-            'L' to 50,
-            'C' to 100,
-            'D' to 500,
-            'M' to 1000
-        )
+
         var result = 0
 
-        for(i downTo(s.length)) {
+        var prevChar: Char = EMPTY_CHAR
+        for (i in s.length - 1 downTo 0) {
+            val char = s[i]
+            val int = char.romanToInt()
+            val prevInt = prevChar.romanToInt()
+
+            if (int >= prevInt) result += int else result -= int
+            prevChar = char
+        }
+
+        return result
+    }
+
+    private fun Char.romanToInt() : Int {
+        return when(this) {
+                        'I' -> 1
+                        'V' -> 5
+                        'X' -> 10
+                        'L' -> 50
+                        'C' -> 100
+                        'D' -> 500
+                        'M' -> 1000
+                        else -> 0
 
         }
+    }
+
+    companion object {
+        const val EMPTY_CHAR = ' '
     }
 }
