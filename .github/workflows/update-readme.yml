@@ -1,3 +1,4 @@
+cat <<EOF > .github/workflows/update-readme.yml
 name: Update README Statistics
 
 on:
@@ -16,28 +17,25 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Calculate Statistics & Update README
+      - name: Calculate & Update
         run: |
-          # 1. 문제 개수 계산
-          COMPLETED=$(find src/leetcode/Top150 -maxdepth 1 -type d -name "Q*" | wc -l | xargs)
-          TOTAL=150
-          PERCENT=$(( COMPLETED * 100 / TOTAL ))
+          COMPLETED=\$(find src/leetcode/Top150 -maxdepth 1 -type d -name "Q*" | wc -l | xargs)
+          PERCENT=\$(( COMPLETED * 100 / 150 ))
+          FILLED=\$(( PERCENT / 10 ))
+          EMPTY=\$(( 10 - FILLED ))
+          BAR=\$(printf '▓%.0s' \$(seq 1 \$FILLED 2>/dev/null || true))\$(printf '░%.0s' \$(seq 1 \$EMPTY 2>/dev/null || true))
           
-          # 2. 프로그레스 바 생성
-          FILLED=$(( PERCENT / 10 ))
-          EMPTY=$(( 10 - FILLED ))
-          BAR=$(printf '▓%.0s' $(seq 1 $FILLED 2>/dev/null || true))$(printf '░%.0s' $(seq 1 $EMPTY 2>/dev/null || true))
-          
-          # 3. README 업데이트 (구분자를 @로 써서 슬래시 충돌 방지)
-          sed -i "s@Status:.*@Status: $COMPLETED / $TOTAL ($PERCENT%)@g" README.md
-          sed -i "s@진행률:.*@진행률: [$BAR] $COMPLETED / $TOTAL ($PERCENT%)@g" README.md
+          # @를 구분자로 써서 더 공격적으로 패턴 매칭
+          sed -i "s@Status:.*@Status: \$COMPLETED / 150 (\$PERCENT%)@g" README.md
+          sed -i "s@진행률:.*@진행률: [\$BAR] \$COMPLETED / 150 (\$PERCENT%)@g" README.md
 
-      - name: Commit and Push changes
+      - name: Commit & Push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
           if ! git diff --staged --quiet; then
-            git commit -m "chore: update README statistics [skip ci]"
+            git commit -m "chore: force update progress [skip ci]"
             git push
           fi
+EOF
