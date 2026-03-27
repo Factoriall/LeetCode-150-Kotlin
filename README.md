@@ -9,4 +9,5 @@
 ## 📝 Problem List
 
 | No. | Problem Title | Link |
-|:---:|:---|:---:|| 0088 | Merge Sorted Array | [Link](https://leetcode.com/problems/merge-sorted-array/) |
+|:---:|:---|:---:|
+| 0088 | Merge Sorted Array | [Link](https://leetcode.com/problems/merge-sorted-array/) |
