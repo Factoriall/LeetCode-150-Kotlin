@@ -16,5 +16,8 @@
 - 시간/공간 복잡도가 목표치 미달일 때만 경고.
 
 ## 🛠️ Skills
-- **@update-notes**: 현재 Solution.kt를 분석해서 Notes.md의 Approach와 Complexity를 즉시 작성하라. 서술형 대신 불렛 포인트로 간결하게 적을 것.
+- **@update-notes**: 
+  1. 현재 `Solution.kt`를 분석하여 `Approach`와 `Complexity`를 작성한다.
+  2. **[Solution Evolution]**: Git log를 기반으로 각 커밋별 '변경 이유'와 '개선점'을 요약한다. (고정된 Step이 아닌 실제 작업 흐름 반영)
+  3. **[Key Insight]**: 최종 풀이에서 가장 결정적이었던 최적화 포인트를 한 줄로 정리한다.
 EOF
