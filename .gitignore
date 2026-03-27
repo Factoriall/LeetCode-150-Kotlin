@@ -1,0 +1,18 @@
+# IDE - IntelliJ / Cursor / Android Studio
+.idea/
+*.iml
+*.iws
+.vscode/
+
+# Build
+out/
+build/
+bin/
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Script logs
+*.log
