@@ -1,8 +1,8 @@
 # LeetCode-150-Kotlin
 
 ## 📊 Status
-- **Status: 6 / 150 (4%)
-- **진행률: [▓▓░░░░░░░░░░] 6 / 150 (4%)
+- **Status: 7 / 150 (4%)
+- **진행률: [▓▓░░░░░░░░░░] 7 / 150 (4%)
 
 ---
 
@@ -16,3 +16,4 @@
 | 0169 | Majority Element | [Link](https://leetcode.com/problems/majority-element/) |
 | 0013 | Roman to Integer | [Link](https://leetcode.com/problems/roman-to-integer/) |
 | 0121 | Best Time to Buy and Sell Stock | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) |
+| 0058 | Length of Last Word | [Link](https://leetcode.com/problems/length-of-last-word/) |
