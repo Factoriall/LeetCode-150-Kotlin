@@ -10,15 +10,11 @@ class Solution {
      */
     fun maxProfit(prices: IntArray): Int {
         var maxProfit = 0
-        var buyPrice = prices[0]
+        var minPrice = prices[0]
 
-        for (idx in 1 until prices.size) {
-            if(buyPrice <= prices[idx]) {
-                val profit = prices[idx] - buyPrice
-                maxProfit = maxOf(maxProfit, profit)
-            } else {
-                buyPrice = prices[idx]
-            }
+        for (todayPrice in prices) {
+            minPrice = minOf(minPrice, todayPrice)
+            maxProfit = maxOf(maxProfit, todayPrice - minPrice)
         }
 
         return maxProfit
