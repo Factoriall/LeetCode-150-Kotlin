@@ -1,8 +1,8 @@
 # LeetCode-150-Kotlin
 
 ## 📊 Status
-- **Status: 8 / 150 (5%)
-- **진행률: [▓▓░░░░░░░░░░] 8 / 150 (5%)
+- **Status: 9 / 150 (6%)
+- **진행률: [▓▓░░░░░░░░░░] 9 / 150 (6%)
 
 ---
 
@@ -18,3 +18,4 @@
 | 0121 | Best Time to Buy and Sell Stock | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) |
 | 0058 | Length of Last Word | [Link](https://leetcode.com/problems/length-of-last-word/) |
 | 0125 | Valid Palindrome | [Link](https://leetcode.com/problems/valid-palindrome/) |
+| 0383 | Ransom Note | [Link](https://leetcode.com/problems/ransom-note/) |
