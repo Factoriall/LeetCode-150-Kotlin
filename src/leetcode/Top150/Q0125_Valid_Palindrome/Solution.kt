@@ -31,6 +31,6 @@ class Solution {
     }
 
     private fun isCharacterSame(a: Char, b: Char): Boolean {
-        return a.lowercase() == b.lowercase()
+        return a.lowercaseChar() == b.lowercaseChar()
     }
 }
