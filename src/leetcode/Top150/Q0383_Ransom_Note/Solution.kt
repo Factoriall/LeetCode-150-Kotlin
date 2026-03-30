@@ -2,14 +2,16 @@ package leetcode.Top150.Q0383_Ransom_Note
 
 class Solution {
     fun canConstruct(ransomNote: String, magazine: String): Boolean {
-        val charMap = mutableMapOf<Char, Int>()
+        val charMap = IntArray(26)
         for (mChar in magazine) {
-            charMap[mChar] = charMap.getOrPut(mChar) { 0 } + 1
+            val idx = mChar - 'a'
+            charMap[idx]++
         }
 
         for (rChar in ransomNote) {
-            if (charMap.getOrPut(rChar) { 0 } == 0) return false
-            charMap[rChar] = charMap[rChar]!! - 1
+            val idx = rChar - 'a'
+            if (charMap[idx] == 0) return false
+            charMap[idx]--
         }
 
         return true
