@@ -1,8 +1,8 @@
 # LeetCode-150-Kotlin
 
 ## 📊 Status
-- **Status: 9 / 150 (6%)
-- **진행률: [▓▓░░░░░░░░░░] 9 / 150 (6%)
+- **Status: 11 / 150 (7%)
+- **진행률: [▓▓░░░░░░░░░░] 11 / 150 (7%)
 
 ---
 
@@ -19,3 +19,4 @@
 | 0058 | Length of Last Word | [Link](https://leetcode.com/problems/length-of-last-word/) |
 | 0125 | Valid Palindrome | [Link](https://leetcode.com/problems/valid-palindrome/) |
 | 0383 | Ransom Note | [Link](https://leetcode.com/problems/ransom-note/) |
+| 0080 | Remove | [Link](https://leetcode.com/problems/remove/) |
