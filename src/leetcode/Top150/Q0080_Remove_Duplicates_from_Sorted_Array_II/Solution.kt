@@ -2,27 +2,21 @@ package leetcode.Top150.Q0080_Remove_Duplicates_from_Sorted_Array_II
 
 class Solution {
     fun removeDuplicates(nums: IntArray): Int {
-        var i = 1
-        var rIdx = 1
-        var num = nums[0]
-        var isDuplicatedOnce = false
-        var k = nums.size
+        var i = 0
+        var rIdx = 0
         while (i < nums.size) {
-            if (num == nums[i]) {
-                if (isDuplicatedOnce) {
-                    k--
-                    i++
-                    continue
-                }
-                isDuplicatedOnce = true
-            } else {
-                num = nums[i]
-                isDuplicatedOnce = false
+            if (i < 2) {
+                i++
+                rIdx++
+                continue
             }
 
-            nums[rIdx++] = nums[i++]
+            if (nums[rIdx - 2] != nums[i]) {
+                nums[rIdx++] = nums[i]
+            }
+            i++
         }
 
-        return k
+        return rIdx
     }
 }
